@@ -17,7 +17,7 @@ services:
       - elastic_data:/usr/share/elasticsearch/data
   etl:
     container_name: etl
-    image: etl:v1.0
+    image: etl:v2.0
     build:
       context: .
       dockerfile: docker/Dockerfile
@@ -28,3 +28,4 @@ services:
 volumes:
   postgres_data:
   elastic_data:
+  etl_state:
